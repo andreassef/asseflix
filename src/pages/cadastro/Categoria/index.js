@@ -1,5 +1,5 @@
 /* eslint-disable linebreak-style */
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
@@ -31,6 +31,15 @@ function CadastroCategoria() {
     // está recebendo via parametro.
     setValor(atributosDoEvento.target.getAttribute('name'), atributosDoEvento.target.value);
   }
+
+  useEffect(() => {
+    console.log("useEffect aqui");
+    const URL_TOP = 'http://localhost:8080/categorias';
+    fetch(URL_TOP).then(async (resquestServer) => {
+      const request = await resquestServer.json();
+      setCategorias(...request);
+    });
+  });
 
   return (
     <PageDefault>
@@ -71,17 +80,14 @@ function CadastroCategoria() {
           onChange={alterarEstado}
         />
 
-        <div>
-          <Button>
-            Cadastro
-          </Button>
-
-        </div>
+        <Button>
+          Cadastro
+        </Button>
       </form>
 
       <ul>
-        {categorias.map((categoria, index) => (
-          <li key={`${categoria}${index}`}>
+        {categorias.map((categoria) => (
+          <li key={categoria.nome}>
             {categoria.nome}
           </li>
         ))}
