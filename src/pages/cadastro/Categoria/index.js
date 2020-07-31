@@ -1,5 +1,5 @@
 /* eslint-disable linebreak-style */
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
@@ -33,13 +33,14 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    console.log("useEffect aqui");
-    const URL_TOP = 'http://localhost:8080/categorias';
-    fetch(URL_TOP).then(async (resquestServer) => {
-      const request = await resquestServer.json();
-      setCategorias(...request);
+    const URL_SERVER = 'http://localhost:8080/categorias';
+    fetch(URL_SERVER).then(async (requestServer) => {
+      const response = await requestServer.json();
+      setCategorias([
+        ...response,
+      ]);
     });
-  });
+  }, []);
 
   return (
     <PageDefault>
@@ -80,10 +81,16 @@ function CadastroCategoria() {
           onChange={alterarEstado}
         />
 
-        <Button>
-          Cadastro
+        <Button as="a">
+          Cadastrar
         </Button>
       </form>
+
+      {categorias.length === 0 && (
+        <div>
+          cargando...
+        </div>
+      )}
 
       <ul>
         {categorias.map((categoria) => (
