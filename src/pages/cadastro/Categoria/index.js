@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
   // a ação de colocar as variaveis dentro dos colchetes significa que estamos abrindo
@@ -13,24 +14,9 @@ function CadastroCategoria() {
     descricao: '',
     cor: '',
   };
+
+  const { alterarEstado, valores, clearForm } = useForm(valoresIniciais);
   const [categorias, setCategorias] = useState([]);
-  const [valores, setValores] = useState(valoresIniciais);
-
-  // função setValor, determina um valor específico para cada campo do formulario
-  function setValor(chave, valor) {
-    setValores({
-      ...valores,
-      [chave]: valor, // a chave entre colchetes vai variar, retornando o valor de cada chave.
-    });
-  }
-
-  // alterarEstado pega o input do atributo name do formulário
-  function alterarEstado(atributosDoEvento) {
-    // const { getAttribute, value } = atributosDoEvento.target;
-    // por meio do console.log conseguimentos visualizar as informações que a função
-    // está recebendo via parametro.
-    setValor(atributosDoEvento.target.getAttribute('name'), atributosDoEvento.target.value);
-  }
 
   useEffect(() => {
     const URL_SERVER = window.location.hostname.includes('localhost')
@@ -55,7 +41,7 @@ function CadastroCategoria() {
         // os tres pontos antes de categorias significa que estamos abrindo tudo que tem
         // dentro dessa variavel e substituindo pelo segundo parametro.
         setCategorias([...categorias, valores]);
-        setValores(valoresIniciais);
+        clearForm(valoresIniciais);
       }}
       >
         <FormField
@@ -82,7 +68,7 @@ function CadastroCategoria() {
           onChange={alterarEstado}
         />
 
-        <Button as="a">
+        <Button type="submit">
           Cadastrar
         </Button>
       </form>
@@ -95,8 +81,8 @@ function CadastroCategoria() {
 
       <ul>
         {categorias.map((categoria) => (
-          <li key={categoria.nome}>
-            {categoria.nome}
+          <li key={categoria.titulo}>
+            {categoria.titulo}
           </li>
         ))}
       </ul>

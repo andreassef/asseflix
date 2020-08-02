@@ -1,16 +1,225 @@
 {
-    "categorias": [
-        {
-            "id": 1,
-            "nome": "Front End",
-            "descricao": "Uma categoria qualquer",
-            "cor": "#cbd1ff"
-        },
-        {
-            "id": 2,
-            "nome": "Back End",
-            "descricao": "Uma categoria qualquer",
-            "cor": "#cbd1ff"
-        }
-    ]
+  "categorias": [
+    {
+      "id": 1,
+      "titulo": "Front End",
+      "cor": "red",
+      "link_extra": {
+        "text": "Formação Front-End",
+        "url": "https://www.alura.com.br/formacao-front-end"
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "Back End",
+      "cor": "blue",
+      "link_extra": {
+        "text": "Cursos de Back End na Alura",
+        "url": "https://www.alura.com.br/cursos-online-programacao"
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "Front End",
+      "cor": "yellow",
+      "link_extra": {
+        "text": "Cursos de Data Science na Alura",
+        "url": "https://www.alura.com.br/formacao-data-science"
+      }
+    },
+    {
+      "id": 4,
+      "titulo": "Back End",
+      "cor": "white",
+      "link_extra": {
+        "text": "Cursos de Data Science na Alura",
+        "url": "https://www.alura.com.br/formacao-data-science"
+      }
+    },
+    {
+      "id": 5,
+      "titulo": "Cloud",
+      "cor": "green",
+      "link_extra": {
+        "text": "Cursos de Data Science na Alura",
+        "url": "https://www.alura.com.br/formacao-data-science"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
+      "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+    },
+    {
+      "id": 2,
+      "categoriaId": 1,
+      "titulo": "SEO com React",
+      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+    },
+    {
+      "id": 3,
+      "categoriaId": 1,
+      "titulo": "Componentização com VanillaJS #AluraMais",
+      "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
+    },
+    {
+      "id": 4,
+      "categoriaId": 1,
+      "titulo": "Pare de chutar e aprenda a display: inline #01",
+      "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
+    },
+    {
+      "id": 5,
+      "categoriaId": 2,
+      "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
+      "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
+    },
+    {
+      "id": 6,
+      "categoriaId": 2,
+      "titulo": "Qual é a melhor linguagem de programação? #HipstersPontoTube",
+      "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w"
+    },
+    {
+      "id": 7,
+      "categoriaId": 2,
+      "titulo": "Novidades do Angular v9",
+      "url": "https://www.youtube.com/watch?v=34uHo7hFmG0"
+    },
+    {
+      "id": 8,
+      "categoriaId": 2,
+      "titulo": "Base para aprender os frameworks",
+      "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI"
+    },
+    {
+      "id": 9,
+      "categoriaId": 3,
+      "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
+      "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+    },
+    {
+      "id": 10,
+      "categoriaId": 3,
+      "titulo": "SEO com React",
+      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+    },
+    {
+      "id": 11,
+      "categoriaId": 3,
+      "titulo": "Componentização com VanillaJS #AluraMais",
+      "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
+    },
+    {
+      "id": 12,
+      "categoriaId": 3,
+      "titulo": "Pare de chutar e aprenda a display: inline #01",
+      "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
+    },
+    {
+      "id": 13,
+      "categoriaId": 4,
+      "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
+      "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
+    },
+    {
+      "id": 14,
+      "categoriaId": 4,
+      "titulo": "Qual é a melhor linguagem de programação? #HipstersPontoTube",
+      "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w"
+    },
+    {
+      "id": 15,
+      "categoriaId": 4,
+      "titulo": "Novidades do Angular v9",
+      "url": "https://www.youtube.com/watch?v=34uHo7hFmG0"
+    },
+    {
+      "id": 16,
+      "categoriaId": 4,
+      "titulo": "Base para aprender os frameworks",
+      "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI"
+    },
+    {
+      "id": 17,
+      "categoriaId": 5,
+      "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
+      "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+    },
+    {
+      "id": 18,
+      "categoriaId": 5,
+      "titulo": "SEO com React",
+      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+    },
+    {
+      "id": 19,
+      "categoriaId": 5,
+      "titulo": "Componentização com VanillaJS #AluraMais",
+      "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
+    },
+    {
+      "id": 20,
+      "categoriaId": 5,
+      "titulo": "Pare de chutar e aprenda a display: inline #01",
+      "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
+    },
+    {
+      "id": 21,
+      "categoriaId": 6,
+      "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
+      "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
+    },
+    {
+      "id": 22,
+      "categoriaId": 6,
+      "titulo": "Qual é a melhor linguagem de programação? #HipstersPontoTube",
+      "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w"
+    },
+    {
+      "id": 23,
+      "categoriaId": 6,
+      "titulo": "Novidades do Angular v9",
+      "url": "https://www.youtube.com/watch?v=34uHo7hFmG0"
+    },
+    {
+      "id": 24,
+      "categoriaId": 6,
+      "titulo": "Base para aprender os frameworks",
+      "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI"
+    },
+    {
+      "titulo": "vasco campeão da copa do Brasil",
+      "url": "https://www.youtube.com/watch?v=T-_-K3oTYJc",
+      "categoriaId": 1,
+      "id": 25
+    },
+    {
+      "titulo": "vasco campeão da copa do Brasil",
+      "url": "https://www.youtube.com/watch?v=T-_-K3oTYJc",
+      "categoriaId": 1,
+      "id": 26
+    },
+    {
+      "titulo": "Stund up",
+      "url": "https://www.youtube.com/watch?v=RMY7uT6IX5c",
+      "categoriaId": 1,
+      "id": 27
+    },
+    {
+      "titulo": "Dev Soutinho",
+      "url": "https://www.youtube.com/watch?v=jOAU81jdi-c",
+      "categoriaId": 1,
+      "id": 28
+    },
+    {
+      "titulo": "Gabriel Pato",
+      "url": "https://www.youtube.com/watch?v=LXI856j_aO4",
+      "categoriaId": 1,
+      "id": 29
+    }
+  ]
 }
